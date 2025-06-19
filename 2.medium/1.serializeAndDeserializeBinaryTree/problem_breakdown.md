@@ -2,7 +2,6 @@
 
 A **binary tree** is a data structure made up of nodes, where each node has at most two children: a **left** child and a **right** child.
 
----
 
 ## Key Features
 
@@ -12,7 +11,6 @@ A **binary tree** is a data structure made up of nodes, where each node has at m
 - **Leaf**: A node with no children.
 - **Subtree**: Any node and all its descendants.
 
----
 
 ## Visualization
 
@@ -29,7 +27,6 @@ A **binary tree** is a data structure made up of nodes, where each node has at m
 - `D` and `E` are children of `B`.
 - `D`, `E`, and `C` are leaves.
 
----
 
 ## Types
 
@@ -37,7 +34,6 @@ A **binary tree** is a data structure made up of nodes, where each node has at m
 - **Complete binary tree**: All levels are filled except possibly the last, which is filled from left to right.
 - **Perfect binary tree**: All internal nodes have two children and all leaves are at the same level.
 
----
 
 **In summary:**  
 A binary tree is a way to organize data with each item connected to at most two others, forming a branching structure perfect for certain kinds of storage, searching, and hierarchical relationships.
@@ -99,7 +95,6 @@ function deserialize(data) {
 - **Encapsulates Logic**:  
   Keeps the recursive logic separate from input parsing and setup.
 
----
 
 In summary, the `helper` function is the core of recursive deserialization, managing shared state (notably the index) and the recursive structure needed to accurately rebuild a binary tree from its serialized representation.
 
@@ -109,7 +104,6 @@ In summary, the `helper` function is the core of recursive deserialization, mana
 
 The main difference comes down to **how recursion and state are managed** in each process.
 
----
 
 ### Serialization
 
@@ -129,7 +123,7 @@ function serialize(node) {
   return `${node.val},${serialize(node.left)},${serialize(node.right)}`;
 }
 ```
----
+
 
 ### Deserialization
 
