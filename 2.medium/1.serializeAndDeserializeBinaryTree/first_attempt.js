@@ -16,22 +16,6 @@ class Node {
     }
 }
 
-// function serialize(root) {
-//     //serializes the tree into a string
-//     var s = ""
-
-//     s += root.val
-
-//     if(root.left == null) {
-//         s += ",#"
-//         return s
-//     }
-
-//     s += "," + serialize(root.left)
-//     return s;
-// }
-
-
 function serialize(root) {
     //serializes the tree into a string
     var s = ""
@@ -43,15 +27,26 @@ function serialize(root) {
     return s
 }
 
+
 function dezerialize(s) {
     //deserializes the string back into the tree
-    if(s[0] == "#") return null
-    
-    const nodes = s.split(",")
-    var root = nodes[0];
-    nodes.slice(1)
-    
-    return new Node(root, dezerialize(nodes.join(",")), nodes.slice(1).join(","))
+
+    var nodes = s.split(",")
+    let index = 0;
+
+    function helper () { // --> inner functions can read and write variables from their parent scope.
+        if(nodes[index] == "#") {
+            index++
+            return null
+        }
+
+        let val = nodes[index];
+        index++
+        console.log(index)
+        return new Node(val, helper(nodes, index), helper(nodes, index))
+    }
+
+    return helper(nodes, index)
 }
 
 console.log("----- TEST CASE 1 ----")

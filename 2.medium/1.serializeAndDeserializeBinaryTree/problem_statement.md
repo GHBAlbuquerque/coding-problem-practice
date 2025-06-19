@@ -47,3 +47,90 @@ Visit root
 Visit right
     left of right is null: #
     right of right is null: #
+
+
+# More Binary Tree Serialize Examples
+
+---
+
+## Example 1
+
+```
+    a
+   / \
+  b   c
+       \
+        d
+```
+**Serialized output:**  
+```
+a,b,#,#,c,#,d,#,#
+```
+
+---
+
+## Example 2
+
+```
+    x
+   /
+  y
+ / \
+z   w
+```
+**Serialized output:**  
+```
+x,y,z,#,#,w,#,#,#
+```
+
+---
+
+## Example 3
+
+```
+    m
+     \
+      n
+     /
+    o
+```
+**Serialized output:**  
+```
+m,#,n,o,#,#,#
+```
+
+---
+
+## Example 4
+
+```
+    p
+   / \
+  q   r
+       \
+        s
+         \
+          t
+```
+**Serialized output:**  
+```
+p,q,#,#,r,#,s,#,t,#,#
+```
+
+---
+
+## Example 5
+
+```
+    1
+   / \
+  2   3
+ /
+4
+ \
+  5
+```
+**Serialized output:**  
+```
+1,2,4,#,5,#,#,#,3,#,#
+```
