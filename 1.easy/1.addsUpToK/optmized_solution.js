@@ -1,7 +1,7 @@
 // if a + b == k, then k - a == b. 
 // For each number subtracted, I check if the result exists on my array. But it can't be the number itself.
 // Instead of checking the array again, I put the numbers already checked on a new set. If the result is there, it means there is a previously seen number such that number + (k - number) == k.
-// pro: only one iteration. should avoid iterating more than once.
+// pro: only one iteration. should avoid iterating more than once. You only iterate through the array once, and at each step, you instantly know if the complement exists among previously seen numbers.
 
 
 function addsUpToK(numbers, k) {
