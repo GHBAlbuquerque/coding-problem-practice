@@ -71,5 +71,5 @@ Compare their performance on large inputs to see the difference.
 
 6. Ask "Can I remember what I've seen so far?"
 For many "find a pair" or "find a sum" problems, consider:
-"If I've seen a value, can it help me answer the question about the current value?"
+**"If I've seen a value, can it help me answer the question about the current value?"**
 This leads naturally to using a set/map to remember "what I've seen so far."
