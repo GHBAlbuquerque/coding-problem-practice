@@ -48,9 +48,10 @@ function dezerialize(s) {
     if(s[0] == "#") return null
     
     const nodes = s.split(",")
+    var root = nodes[0];
+    nodes.slice(1)
     
-    //root,left,left.left,#,#,#,right,#,#
-    return new Node(nodes[0], dezerialize(nodes.slice(1).join(",")), )
+    return new Node(root, dezerialize(nodes.join(",")), nodes.slice(1).join(","))
 }
 
 console.log("----- TEST CASE 1 ----")
