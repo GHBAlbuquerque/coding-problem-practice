@@ -155,7 +155,6 @@ function deserialize(data) {
   return helper();
 }
 ```
----
 
 ### Summary Table
 
@@ -164,7 +163,6 @@ function deserialize(data) {
 | Serialization  | Not strictly     | The call stack manages state naturally          |
 | Deserialization| Yes              | Need to track index/position in data as you go  |
 
----
 
 **In short:**  
 - Serialization is “write as you go,” so the recursion handles everything.
