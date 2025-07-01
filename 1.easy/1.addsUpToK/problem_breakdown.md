@@ -1,4 +1,4 @@
-### Explanation of the Solution
+# Explanation of the Solution
 
 ```javascript
 function addsUpToK(numbers, k) {
