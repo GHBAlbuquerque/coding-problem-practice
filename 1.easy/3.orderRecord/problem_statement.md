@@ -25,3 +25,8 @@ int lastAddedIndex = (current -1 + capacity) % capacity
 
 ![img.png](img.png)
 ```
+
+
+```
+javac OrderRecordLogger.java && java OrderRecordLogger
+```
