@@ -18,9 +18,11 @@ public class ContainsDuplicate {
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 1};
+        int[] nums2 = {1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
+        int[] nums3 = {1, 2, 3, 4};
 
-        Boolean result = ContainsDuplicate.containsDuplicate(nums);
-
-        System.out.println(result);
+        System.out.print(ContainsDuplicate.containsDuplicate(nums)+ "\n");
+        System.out.print(ContainsDuplicate.containsDuplicate(nums2) + "\n");
+        System.out.print(ContainsDuplicate.containsDuplicate(nums3) + "\n");
     }
 }
