@@ -8,7 +8,7 @@ public class TwoSum {
         for(int i=0; i < nums.length; i++) {
             int result = target - nums[i];
             if(seen.get(result) != null) {
-                return new int[] {seen.get(result), i};
+                return new int[] {seen.get(result), i}; //returns the array with the positions
             }
             seen.put(nums[i], i);
         }
