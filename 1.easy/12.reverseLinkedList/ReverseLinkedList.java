@@ -13,6 +13,20 @@ class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    public static ListNode createList(int[] values) {
+        if (values == null || values.length == 0) return null;
+
+        ListNode head = new ListNode(values[0]);
+        ListNode current = head;
+
+        for (int i = 1; i < values.length; i++) {
+            current.next = new ListNode(values[i]);
+            current = current.next;
+        }
+
+        return head;
+    }
 }
 
 
@@ -57,19 +71,19 @@ public class ReverseLinkedList {
 
         ReverseLinkedList.printList(ReverseLinkedList.reverselist(node1));
 
-        ListNode node1 = createList(new int[]{1, 2, 3, 4, 5});
+        ListNode node1 = ListNode.createList(new int[]{1, 2, 3, 4, 5});
         ReverseLinkedList.printList(ReverseLinkedList.reverselist(node1));  // Expected output: 5 4 3 2 1
 
-        ListNode node2 = createList(new int[]{1, 2});
+        ListNode node2 = ListNode.createList(new int[]{1, 2});
         ReverseLinkedList.printList(ReverseLinkedList.reverselist(node2));  // Expected output: 2 1
 
-        ListNode node3 = createList(new int[]{});
+        ListNode node3 = ListNode.createList(new int[]{});
         ReverseLinkedList.printList(ReverseLinkedList.reverselist(node3));  // Expected output: (empty)
 
-        ListNode node4 = createList(new int[]{10});
+        ListNode node4 = ListNode.createList(new int[]{10});
         ReverseLinkedList.printList(ReverseLinkedList.reverselist(node4));  // Expected output: 10
 
-        ListNode node5 = createList(new int[]{7, 14, 21});
+        ListNode node5 = ListNode.createList(new int[]{7, 14, 21});
         ReverseLinkedList.printList(ReverseLinkedList.reverselist(node5));  // Expected output: 21 14 7
     }
 }
