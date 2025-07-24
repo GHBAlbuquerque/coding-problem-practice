@@ -1,0 +1,49 @@
+1. Reverse a String
+
+Implement a function that takes a string and returns it reversed.
+Key skills: string manipulation, two-pointer approach  ￼.
+
+2. Fibonacci Sequence
+
+Return the nth Fibonacci number.
+Key skills: recursion, memoization or iterative solution  ￼.
+
+3. Find the Missing Number
+
+Given an array [0…n] with one missing number, find it.
+Key skills: math formulas or XOR trick  ￼.
+
+4. Merge Two Sorted Lists
+
+Merge two sorted linked lists into one sorted list.
+Key skills: linked list traversal, dummy node pattern  ￼.
+
+5. Balanced Parentheses
+
+Check whether a string of brackets is balanced.
+Key skills: stack usage, mapping open/close brackets  ￼.
+
+6. Implement a Stack Using a Linked List
+
+Build a LIFO stack using linked list infrastructure.
+Key skills: pointer manipulation, push/pop semantics  ￼.
+
+7. Find the Longest Substring Without Repeating Characters
+
+Return the length of the longest substring with all unique characters.
+Key skills: sliding window, hash maps, string scanning  ￼.
+
+8. Implement Binary Search
+
+Given a sorted array, locate a target using binary search.
+Key skills: index arithmetic, correct midpoint logic  ￼.
+
+9. Calculate Factorial
+
+Return n! for a given integer n.
+Key skills: recursion, handling large n or integer overflow  ￼.
+
+10. Check if a String is a Palindrome
+
+Determine if the input string reads the same forward and backward.
+Key skills: two-pointer, clean string checks  ￼.

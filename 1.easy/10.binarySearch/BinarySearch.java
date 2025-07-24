@@ -20,9 +20,9 @@ public class BinarySearch {
             if(evaluated == target) return index;
 
             if(evaluated < target) {
-                lowest = index+1; //already check the index value, so should be the one before
+                lowest = index+1; //already check the index value, so should be the one after
             } else {
-                highest = index-1; //already check the index value, so should be the one after
+                highest = index-1; //already check the index value, so should be the one before
             }
         }
 
