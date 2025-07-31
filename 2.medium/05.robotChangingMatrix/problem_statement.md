@@ -1,4 +1,4 @@
-❖ Problem: Matrix Command Executor
+## Problem: Matrix Command Executor
 
 You are given a 2D matrix of integers and a list of commands to manipulate the matrix. Each command alters the matrix in some way — either by swapping, reversing, or rotating rows or columns.
 

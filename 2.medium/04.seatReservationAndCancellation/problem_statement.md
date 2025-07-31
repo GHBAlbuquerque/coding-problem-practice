@@ -1,4 +1,4 @@
-🪑 Problem Summary – Seat Reservation System
+## 🪑 Problem Summary – Seat Reservation System
 
 A movie theater has N seats numbered 1 to N
 Build a seat reservation system that performs one of the following operations K times:
