@@ -26,7 +26,7 @@ public class SubtreeOfNodeTree {
     public static boolean isSubtree(TreeNode root, TreeNode subRoot) {
         if(subRoot == null) return true; // a null subtree is a subtree of any tree
         if(root == null) return false; // there is no subtree to check.
-        // but if both are null, it's equal, so subtree == null vhas to be checked first
+        // but if both are null, it's equal, so subtree == null has to be checked first
 
         if(isSameTree(root, subRoot)) return true;
 
