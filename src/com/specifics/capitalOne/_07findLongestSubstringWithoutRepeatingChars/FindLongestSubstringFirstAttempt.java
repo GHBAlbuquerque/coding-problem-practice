@@ -2,7 +2,7 @@ package com.specifics.capitalOne._07findLongestSubstringWithoutRepeatingChars;
 
 import java.util.*;
 
-public class FindLongestSubstring {
+public class FindLongestSubstringFirstAttempt {
 
     public static int lengthOfLongestSubstring(String s) {
         if(s == null) return 0;
@@ -35,26 +35,26 @@ public class FindLongestSubstring {
     }
 
     public static void main(String[] args) {
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("abcdef"));      // 6
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("abcabcbb"));    // 3
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("bbbbb"));       // 1
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("pwwkew"));      // 3
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring(""));            // 0
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring(" "));           // 1
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("au"));          // 2
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("abba"));        // 2
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("abcdef"));      // 6
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("abcabcbb"));    // 3
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("bbbbb"));       // 1
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("pwwkew"));      // 3
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring(""));            // 0
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring(" "));           // 1
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("au"));          // 2
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("abba"));        // 2
         System.out.println("-------------------");
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("dvdf"));        // 3
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("anviaj"));      // 5
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("tmmzuxt"));     // 5
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("abcabcbbxyz")); // 6
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("abcade"));      // 5
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("123456123"));   // 6
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("a1b2c3d4"));    // 8
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("dvdf"));        // 3
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("anviaj"));      // 5
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("tmmzuxt"));     // 5
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("abcabcbbxyz")); // 6
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("abcade"));      // 5
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("123456123"));   // 6
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("a1b2c3d4"));    // 8
         System.out.println("-------------------");
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("a!b@c#"));      // 6
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("🙂🙃🙂🙃"));       // 2
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("我爱我家"));       // 3
-        System.out.println(FindLongestSubstring.lengthOfLongestSubstring("a你b好c你"));     // 5
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("a!b@c#"));      // 6
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("🙂🙃🙂🙃"));       // 2
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("我爱我家"));       // 3
+        System.out.println(FindLongestSubstringFirstAttempt.lengthOfLongestSubstring("a你b好c你"));     // 5
     }
 }

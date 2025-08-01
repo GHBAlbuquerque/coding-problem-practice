@@ -1,35 +1,4 @@
-package com.specifics.capitalOne._04mergeTwoSortedLists;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    public static ListNode createList(int[] values) {
-        if (values == null || values.length == 0) return null;
-
-        ListNode head = new ListNode(values[0]);
-        ListNode current = head;
-
-        for (int i = 1; i < values.length; i++) {
-            current.next = new ListNode(values[i]);
-            current = current.next;
-        }
-
-        return head;
-    }
-}
+package com.easy._12reverseLinkedList;
 
 public class MergeTwoSortedLists {
 
@@ -75,6 +44,6 @@ public class MergeTwoSortedLists {
         ListNode node1 = ListNode.createList(new int[]{5,7,9});
         ListNode node2 = ListNode.createList(new int[]{4,8,10});
 
-        com.easy._13mergeTwoSortedLists.MergeTwoSortedLists.printList(com.easy._13mergeTwoSortedLists.MergeTwoSortedLists.mergeLists(node1, node2));
+       MergeTwoSortedLists.printList(MergeTwoSortedLists.mergeLists(node1, node2));
     }
 }
