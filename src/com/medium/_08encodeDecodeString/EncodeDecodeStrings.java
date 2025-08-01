@@ -24,16 +24,24 @@ public class EncodeDecodeStrings {
     public static List<String> decode(String s) {
         List<String> strs = new ArrayList<>();
 
-        for(int i=0; i<s.length()-1; i++) {
-            char current = s.charAt(i);
+        int i = 0;
+        while(i < s.length()) {
+            if(Character.isDigit(s.charAt(i))) {
+                String numbers = "";
+               while(Character.isDigit(s.charAt(i))) {
+                   numbers+= s.charAt(i);
+                   i++;
+               }
 
-            if(Character.isDigit(current) && s.charAt(i+1) == '#') {
-                    int number = current - '0';
-                    String word = s.substring(i+2, i+2+number);
-                    strs.add(word);
-                    i = i+1+number; // jump ahead considering # and length
-                }
+               if(s.charAt(i) == '#'){
+                   int size = Integer.valueOf(numbers);
+                   String word = s.substring(i+1, i+1+size);
+                   strs.add(word);
+                   i+=size;
+               }
             }
+            i++;
+        }
 
         return strs;
     }
@@ -48,7 +56,7 @@ public class EncodeDecodeStrings {
         System.out.println(decoded);
 
 
-        List<String> strs2 = List.of("", "");
+        List<String> strs2 = List.of("125fhdjgvstef", "dmeklnfbsgee");
 
         String encoded2 = EncodeDecodeStrings.encode(strs2);
         List<String> decoded2 =EncodeDecodeStrings.decode(encoded2);
