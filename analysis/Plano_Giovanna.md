@@ -7,7 +7,7 @@
 - **Ação:**  
 Leia com atenção o enunciado completo. Observe os exemplos com entrada e saída. Lembre de ver os **constraints**, eles dão dicas valiosas do problema.
   
-  **Objetivo:** Entender o que o problema quer, sem pensar ainda em resolver código.
+**Objetivo:** Entender o que o problema quer, sem pensar ainda em resolver código.
 
 ---
 
@@ -42,10 +42,16 @@ Escreva sobre:
 ---
 
 ### 5. Identificação de Padrão
+padrão -> é a ideia geral do exercicio não o algoritmo que vai usar.
+Aí normalmente padrões tendem a ser resolvidos por um tipo de algoritmo
+
+"remover duplicatas""reversão in-place","encontrar pares"
+Lembra, aqui não é o algoritmo como sliding window ou two-pointers, mas o padrão.
+Por exemplo Padrão: "encontrar pares" -> Método: normalmente usa o algoritmo two-pointers
 
 - **Ação:**  
 Diga qual tipo de problema parece ser:
-  - Ex: "Isso me parece um problema de sliding window porque preciso achar uma subparte contínua do array."
+  - Ex: "Isso me parece um problema de encontrar intervalo porque preciso achar uma subparte contínua do array."
   - Ex: “Parece DP, pois tem decisão passo a passo com sobreposição.”
 
 ---
