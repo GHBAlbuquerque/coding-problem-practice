@@ -1,6 +1,8 @@
 # Plano de Estudo Giovanna - Interpretação de Problemas de Algoritmos
 
-## Etapas do Estudo (10-15 minutos por problema, evitar fazer mais que 3 em sequência, mais que isso não absorve tanto e só desperdiça tempo. Melhor 2 focados que 20 distraidos.)
+## Etapas do Estudo 
+
+10-15 minutos por problema, evitar fazer mais que 3 em sequência, mais que isso não absorve tanto e só desperdiça tempo. Melhor 2 focados que 20 distraidos.
 
 ### 1. Leitura Ativa
 

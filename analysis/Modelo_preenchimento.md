@@ -9,10 +9,10 @@
 **2. Descrição em 2 frases:**  
 ...
 
-**3. Ideia geral de solução:**  
+**3. Input/Output/Constraints:**  
 ...
 
-**4. Input/Output/Constraints:**  
+**4. Ideia geral de solução:**  
 ...
 
 **5. Padrão identificado:**  
