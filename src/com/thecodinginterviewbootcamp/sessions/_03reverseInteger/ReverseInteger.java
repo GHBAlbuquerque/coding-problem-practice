@@ -18,6 +18,14 @@ package com.thecodinginterviewbootcamp.sessions._03reverseInteger;
 public class ReverseInteger {
 
     public static int reverseInteger(int n) {
+        int absN = Math.abs(n);
+        StringBuilder reversed = new StringBuilder(String.valueOf(absN)).reverse();
+
+        return (int) (Integer.parseInt(reversed.toString()) * Math.signum(n));
+    }
+
+    public static int reverseIntegerSol2(int n) {
+        int abs = Math.abs(n);
         StringBuilder reversed = new StringBuilder(String.valueOf(n)).reverse();
 
         if(reversed.indexOf("-") != -1) {
@@ -65,7 +73,7 @@ public class ReverseInteger {
 
         // Test 4: flips a negative number
         System.out.println("Test 4a: reverseInteger(-5) → " + reverseInteger(-5));
-        System.out.println("Test 4b: reverseInteger(-15) → " + reverseIntegerSol1(-15));
+        System.out.println("Test 4b: reverseInteger(-15) → " + reverseInteger(-15));
         System.out.println("Test 4c: reverseInteger(-90) → " + reverseInteger(-90));
         System.out.println("Test 4d: reverseInteger(-2359) → " + reverseInteger(-2359));
     }
