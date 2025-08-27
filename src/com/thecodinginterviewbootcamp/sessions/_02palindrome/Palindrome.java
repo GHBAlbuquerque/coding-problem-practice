@@ -28,6 +28,19 @@ public class Palindrome {
         return reversed.toString().equals(s);
     }
 
+    public static Boolean palindromeSol3(String s) {
+
+        int i = 0;
+        for(char letter : s.toCharArray()) {
+            boolean result = letter == s.charAt(s.length()-1-i);
+            if (!result) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         // Test 1: palindrome function is defined
         if (palindrome("") != null) {
@@ -59,5 +72,11 @@ public class Palindrome {
 
         // Test 9: "vaca" is not a palindrome
         System.out.println("Test 9: \"vaca\" should be false → " + palindromeSol2("vaca"));
+
+        // Test 10: "acca" a palindrome
+        System.out.println("Test 10: \"acca\" → " + palindromeSol3("pennep"));
+
+        // Test 11: "vaca" is not a palindrome
+        System.out.println("Test 11: \"vaca\" should be false → " + palindromeSol3("vaca"));
     }
 }
