@@ -2,7 +2,9 @@ package com.thecodinginterviewbootcamp.sessions._06arrayChunking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // --- Directions
 // Given an array and chunk size, divide the array into many subarrays
@@ -15,6 +17,27 @@ import java.util.List;
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 public class ArrayChunk {
+
+    public static List<List<Integer>> chunk(int[] array, int size) {
+        List<List<Integer>> response = new ArrayList<>();
+
+        for(int number : array) {
+            // checks if the last chunk still has space (or whether it exists)
+            List<Integer> lastChunk = response.isEmpty()? null : response.get(response.size()-1);
+
+            // if does not exist or if full, add new chunk
+            if(lastChunk == null || lastChunk.size() >= size) {
+                List<Integer> newChunk = new ArrayList<>();
+                newChunk.add(number);
+                response.add(newChunk);
+            //if not full, add current number
+            } else {
+                lastChunk.add(number);
+            }
+        }
+
+        return response;
+    }
 
     public static List<List<Integer>> chunkSol1(int[] array, int size) {
         List<List<Integer>> response = new ArrayList<>();
@@ -35,24 +58,24 @@ public class ArrayChunk {
         return response;
     }
 
-    public static List<List<Integer>> chunk(int[] array, int size) {
+    public static List<List<Integer>> chunkSol2Sublist(int[] array, int size) {
+        List<Integer> input = new ArrayList<>(Arrays.stream(array).boxed().toList());
         List<List<Integer>> response = new ArrayList<>();
 
-        for(int number : array) {
-            // checks if the last chunk still has space (or whether it exists)
-            List<Integer> lastChunk = response.isEmpty()? null : response.get(response.size()-1);
-
-            // if does not exist or if full, add new chunk
-            if(lastChunk == null || lastChunk.size() >= size) {
-                List<Integer> newChunk = new ArrayList<>();
-                newChunk.add(number);
-                response.add(newChunk);
-            //if not full, add current number
-            } else {
-                lastChunk.add(number);
+        int index = 0;
+        while(index < input.size()) {
+            if(index+size > input.size()) {
+                List<Integer> sublist = input.subList(index, input.size());
+                response.add(sublist);
+                break;
             }
-        }
 
+            //from (inclusive) to (exclusive)
+            List<Integer> sublist = input.subList(index, index+size);
+            response.add(sublist);
+
+            index += size;
+        }
 
         return response;
     }
