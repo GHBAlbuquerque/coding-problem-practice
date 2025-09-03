@@ -64,14 +64,10 @@ public class ArrayChunk {
 
         int index = 0;
         while(index < input.size()) {
-            if(index+size > input.size()) {
-                List<Integer> sublist = input.subList(index, input.size());
-                response.add(sublist);
-                break;
-            }
+            int end = Math.min(index + size, input.size());
 
             //from (inclusive) to (exclusive)
-            List<Integer> sublist = input.subList(index, index+size);
+            List<Integer> sublist = input.subList(index, end);
             response.add(sublist);
 
             index += size;
