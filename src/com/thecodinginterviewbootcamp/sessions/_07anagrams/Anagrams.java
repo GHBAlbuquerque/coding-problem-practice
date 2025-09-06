@@ -1,5 +1,6 @@
 package com.thecodinginterviewbootcamp.sessions._07anagrams;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -54,6 +55,23 @@ public class Anagrams {
         //return count.values().stream().filter(value -> value != 0).count() == 0;
     }
 
+
+    public static Boolean anagrams2(String a, String b) {
+        if(a == null && b == null) return false;
+        if(a == null || b == null) return false;
+
+        String cleanedA = cleanString(a);
+        String cleanedB = cleanString(b);
+        if(cleanedA.length() != cleanedB.length()) return false;
+
+        char[] charsA = cleanedA.toCharArray();
+        char[] charsB = cleanedB.toCharArray();
+        Arrays.sort(charsA);
+        Arrays.sort(charsB);
+
+        return  Arrays.equals(charsA,charsB);
+    }
+
     public static void main(String[] args) {
         // "hello" is an anagram of "llohe"
         System.out.println("\"hello\" vs \"llohe\" should be true: " + anagrams("hello", "llohe"));
@@ -75,8 +93,8 @@ public class Anagrams {
                 + anagrams("A tree, a life, a bench", "A tree, a fence, a yard"));
 
         // Extra tests
-        System.out.println("\"rail safety\" vs \"fairy tales\": should be true: " + anagrams("rail safety", "fairy tales"));
-        System.out.println("\"RAIL! SAFETY!\" vs \"fairy tales\" should be true: " + anagrams("RAIL! SAFETY!", "fairy tales"));
-        System.out.println("\"Hi there\" vs \"Bye there\" should be false: " + anagrams("Hi there", "Bye there"));
+        System.out.println("\"rail safety\" vs \"fairy tales\": should be true: " + anagrams2("rail safety", "fairy tales"));
+        System.out.println("\"RAIL! SAFETY!\" vs \"fairy tales\" should be true: " + anagrams2("RAIL! SAFETY!", "fairy tales"));
+        System.out.println("\"Hi there\" vs \"Bye there\" should be false: " + anagrams2("Hi there", "Bye there"));
     }
 }
