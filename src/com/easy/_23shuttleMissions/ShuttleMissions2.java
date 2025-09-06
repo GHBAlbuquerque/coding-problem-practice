@@ -1,6 +1,6 @@
 package com.easy._23shuttleMissions;
 
-public class ShuttleMissions {
+public class ShuttleMissions2 {
 
     public static int solution(int[] alpha2beta, int[] beta2alpha, int missions) {
         int time =0;
@@ -15,14 +15,15 @@ public class ShuttleMissions {
                 // need to increment while i don't find a timeslot I can take
                 a2bindex++;
             }
-            time = alpha2beta[a2bindex]; // add going trip
+            time += alpha2beta[a2bindex]; // add going trip
+            time += 100; //(add travel time)
 
             // ---- Beta -> Alpha ----
             while(b2aindex < beta2alpha.length && beta2alpha[b2aindex] < time) {
                 // need to increment while i don't find a timeslot I can take
                 b2aindex++;
             }
-            time = beta2alpha[b2aindex]; // add coming back trip
+            time += beta2alpha[b2aindex]; // add coming back trip
         }
 
         return time;
