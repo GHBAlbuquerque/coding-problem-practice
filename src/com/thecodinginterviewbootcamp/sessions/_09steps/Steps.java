@@ -41,6 +41,28 @@ public class Steps {
         return steps;
     }
 
+    public static void stepsRecursive(int n) {
+        List<String> steps = new ArrayList<>();
+
+        recursion(n, 1);
+    }
+
+    private static void recursion(int n, int row){
+        // base case?
+        if(n == 0) {
+           return;
+        }
+
+        StringBuilder step = new StringBuilder();
+        step.append("#".repeat(row));
+        step.append(" ".repeat(Math.max(0, n-row)));
+
+        System.out.printf("n is %s, row is %s: ", n, row);
+        System.out.println(step);
+
+        recursion(n-1, row+1);
+    }
+
     public static void main(String[] args) {
         // --- Test 1: steps(1)
         System.out.println("steps(1):");
@@ -62,5 +84,7 @@ public class Steps {
             System.out.println(line);
         }
         System.out.println();
+
+        stepsRecursive(5);
     }
 }
