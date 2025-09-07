@@ -45,6 +45,8 @@ public class Steps {
         List<String> steps = new ArrayList<>();
 
         recursion(n, 1);
+        System.out.println("----------");
+        recursionV2(n, 1);
     }
 
     private static void recursion(int n, int row){
@@ -61,6 +63,22 @@ public class Steps {
         System.out.println(step);
 
         recursion(n-1, row+1);
+    }
+
+    private static void recursionV2(int n, int row){
+        // base case?
+        if(n < row) {
+            return;
+        }
+
+        StringBuilder step = new StringBuilder();
+        step.append("#".repeat(row));
+        step.append(" ".repeat(Math.max(0, n-row)));
+
+        System.out.printf("n is %s, row is %s: ", n, row);
+        System.out.println(step);
+
+        recursionV2(n, row+1);
     }
 
     public static void main(String[] args) {
