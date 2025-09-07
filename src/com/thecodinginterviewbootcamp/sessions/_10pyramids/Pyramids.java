@@ -18,6 +18,22 @@ package com.thecodinginterviewbootcamp.sessions._10pyramids;
 
 public class Pyramids {
 
+    public static void pyramidIterative(int n) {
+        for(int i=0;i<n;i++) {
+            int total = (n-1)*2+1;
+            int pyramid = i*2+1;
+            int spaces = Math.max(0, total - pyramid);
+
+            StringBuilder level = new StringBuilder();
+
+            level.append(" ".repeat((spaces/2)));
+            level.append("#".repeat(pyramid));
+            level.append(" ".repeat(spaces/2));
+
+            System.out.println(level);
+        }
+    }
+
     public static void pyramid(int n) {
         recursion(n, 0);
     }
@@ -71,6 +87,18 @@ public class Pyramids {
         System.out.println("#######"); // 3 - +3 each side --- total: (n-1)*2+1
         System.out.println("Your output:");
         pyramid(4);
+        System.out.println();
+
+
+        // Test 5: pyramid(5)
+        System.out.println("Expected output for n=5:");
+        System.out.println("    #    "); // 0 -
+        System.out.println("   ###   "); // 1 - +1 each side
+        System.out.println("  #####  "); // 2 - +2 each side --- total: (n-1)*2+1  #:level*2+1
+        System.out.println(" ####### "); // 3 - +3 each side --- total: (n-1)*2+1
+        System.out.println("#########"); // 3 - +3 each side --- total: (n-1)*2+1
+        System.out.println("Your output:");
+        pyramidIterative(5);
         System.out.println();
     }
 }
