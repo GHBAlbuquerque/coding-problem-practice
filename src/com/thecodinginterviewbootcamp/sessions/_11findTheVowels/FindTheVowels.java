@@ -27,6 +27,20 @@ public class FindTheVowels {
         return count;
     }
 
+    public static int vowels2(String s) {
+        if(s == null) return 0;
+
+        String vowels = "aeiou";
+
+        int count = 0;
+
+        for(Character letter : s.toLowerCase().toCharArray()) {
+            if(vowels.contains(letter.toString())) count++;
+        }
+
+        return count;
+    }
+
     public static void main(String[] args) {
         // Test 1: vowels is a function
         System.out.println("vowels is a method: " + (FindTheVowels.class != null));
@@ -54,7 +68,7 @@ public class FindTheVowels {
 
         // Test 6
         System.out.println("Expected: 4");
-        System.out.println("Actual:   " + vowels("Why do you ask?"));
+        System.out.println("Actual:   " + vowels2("Why do you ask?"));
         System.out.println();
     }
 }
