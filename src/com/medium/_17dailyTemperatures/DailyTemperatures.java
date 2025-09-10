@@ -6,7 +6,7 @@ import java.util.Stack;
 1) I get an array of daily temperatures
 2) I have to get how many days, from that day im checking, i have to wait to get a warmer day -> the difference between indexes!
 3) I need to iterate over the array of temperatures
-4) i create a stack to keep track of the indexes that came before
+4) I create a stack to keep track of the indexes that came before
 5) If the stack is empty, I add the first value and continue
 6) I go to next number and see if it is bigger than what is in the stack (peek)
     - if my current temp is bigger than the temperature in the stack (temperature[stack.peek()]]
